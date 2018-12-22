@@ -42,6 +42,7 @@ const Home = props => {
                             label="Código"
                             fullWidth
                             autoComplete="fname"
+                            variant="outlined"
                         />
                     </Grid>
                     <Grid item xs={12} sm={6}>
@@ -52,6 +53,7 @@ const Home = props => {
                             label="Data"
                             fullWidth
                             autoComplete="lname"
+                            variant="outlined"
                         />
                     </Grid>
                     <Grid item xs={12}>
@@ -62,6 +64,7 @@ const Home = props => {
                             label="Razão Social"
                             fullWidth
                             autoComplete="billing address-line1"
+                            variant="outlined"
                         />
                     </Grid>
                     <Grid item xs={12}>
@@ -71,6 +74,7 @@ const Home = props => {
                             label="Nome Fantasia"
                             fullWidth
                             autoComplete="billing address-line2"
+                            variant="outlined"
                         />
                     </Grid>
                     <Grid item xs={12} sm={6}>
@@ -81,10 +85,11 @@ const Home = props => {
                             label="Contato"
                             fullWidth
                             autoComplete="billing address-level2"
+                            variant="outlined"
                         />
                     </Grid>
                     <Grid item xs={12} sm={6}>
-                        <TextField id="email" name="email" label="E-mail" fullWidth />
+                        <TextField id="email" name="email" label="E-mail" fullWidth variant="outlined" />
                     </Grid>
                     <Grid item xs={12} sm={6}>
                         <TextField
@@ -94,6 +99,7 @@ const Home = props => {
                             label="CNPJ"
                             fullWidth
                             autoComplete="billing postal-code"
+                            variant="outlined"
                         />
                     </Grid>
                     <Grid item xs={12} sm={6}>
@@ -104,6 +110,7 @@ const Home = props => {
                             label="Insc. Estadual"
                             fullWidth
                             autoComplete="billing country"
+                            variant="outlined"
                         />
                     </Grid>
                 </Grid>
