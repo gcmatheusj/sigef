@@ -14,6 +14,8 @@ import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
 import withStyles from '@material-ui/core/styles/withStyles';
 
+import logo from '../../assets/logo.jpg'
+
 import styles from './styles'
 
 function SignIn(props) {
@@ -23,9 +25,7 @@ function SignIn(props) {
     <main className={classes.main}>
       <CssBaseline />
       <Paper className={classes.paper}>
-        <Avatar className={classes.avatar}>
-          <LockIcon />
-        </Avatar>
+        <img className={classes.logo} src={logo} alt="" />
         <Typography component="h1" variant="h5">
           Acesso ao sistema
         </Typography>

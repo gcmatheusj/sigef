@@ -29,6 +29,9 @@ const styles = theme => ({
       marginTop: theme.spacing.unit * 3,
       color: '#FFF'
     },
+    logo: {
+      
+    }
   });
 
 export default styles

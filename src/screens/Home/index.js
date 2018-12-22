@@ -5,7 +5,9 @@ import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
-import { Typography, Paper } from '@material-ui/core';
+import { Typography, Paper, Button } from '@material-ui/core';
+import Add from '@material-ui/icons/Add'
+import Search from '@material-ui/icons/Search'
 import { withStyles } from '@material-ui/core/styles'
 
 const styles = theme => ({
@@ -17,6 +19,11 @@ const styles = theme => ({
         fontSize: 20,
         fontWeight: 'bold',
         marginBottom: 20
+    },
+    btn: {
+        marginTop: 20,
+        marginRight: 10,
+        color: '#fff'
     }
 })
 
@@ -26,9 +33,6 @@ const Home = props => {
         <Header title="SIGEF">
             <Paper className={classes.root}>
                 <Typography className={classes.title} variant="subtitle1">Cadastro das Empresas</Typography>
-                <Typography variant="h6" gutterBottom>
-                    Shipping address
-                </Typography>
                 <Grid container spacing={24}>
                     <Grid item xs={12} sm={6}>
                         <TextField
@@ -80,7 +84,7 @@ const Home = props => {
                         />
                     </Grid>
                     <Grid item xs={12} sm={6}>
-                        <TextField id="state" name="state" label="State/Province/Region" fullWidth />
+                        <TextField id="email" name="email" label="E-mail" fullWidth />
                     </Grid>
                     <Grid item xs={12} sm={6}>
                         <TextField
@@ -102,12 +106,16 @@ const Home = props => {
                             autoComplete="billing country"
                         />
                     </Grid>
-                    <Grid item xs={12}>
-                        <FormControlLabel
-                            control={<Checkbox color="secondary" name="saveAddress" value="yes" />}
-                            label="Use this address for payment details"
-                        />
-                    </Grid>
+                </Grid>
+                <Grid container justify="flex-start">
+                    <Button className={classes.btn} variant='contained' color='primary'>
+                        <Add />
+                        Novo
+                        </Button>
+                    <Button className={classes.btn} variant='contained' color='primary'>
+                        <Search />
+                        Localizar
+                    </Button>
                 </Grid>
             </Paper>
         </Header>
