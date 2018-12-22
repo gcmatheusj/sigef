@@ -12,6 +12,7 @@ import {
   MenuList,
   MenuItem,
   ListItemIcon,
+  ListItemText,
   CssBaseline,
 } from '@material-ui/core';
 import HomeIcon from '@material-ui/icons/Home'
@@ -34,6 +35,9 @@ const styles = theme => ({
   },
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
+  },
+  title: {
+    color: '#fff'
   },
   menuButton: {
     marginRight: 20,
@@ -73,23 +77,38 @@ class Header extends Component {
           <div className={classes.toolbar} />
         </Hidden>
         <MenuList>
-          <MenuItem component={Link} to='' /*selected={'/escolha-do-modelo' === pathname} */>
+          <MenuItem
+            component={Link}
+            to='/escolha-do-modelo'
+            selected={
+              '/escolha-do-modelo' === pathname ||
+              '/novo-tutor' === pathname ||
+              '/usando-modelo' === pathname
+            }
+          >
             <ListItemIcon>
               <AddIcon />
             </ListItemIcon>
-            Create Tutor
+            <ListItemText inset primary="Create Tutor" />
           </MenuItem>
-          <MenuItem component={Link} to='/'>
+
+          <MenuItem
+            component={Link} to='/'
+          >
             <ListItemIcon>
               <HomeIcon />
             </ListItemIcon>
-            Home
+            <ListItemText inset primary="Home" />
           </MenuItem>
-          <MenuItem component={Link} to='/visualizar-tutores'>
+          <MenuItem
+            component={Link}
+            to='/visualizar-tutores'
+            selected={'/visualizar-tutores' === pathname}
+          >
             <ListItemIcon>
               <DashboardIcon />
             </ListItemIcon>
-            Dashboard
+            <ListItemText inset primary="Dashboard" />
           </MenuItem>
         </MenuList>
       </div>
@@ -109,7 +128,7 @@ class Header extends Component {
               >
                 <Menu />
               </IconButton>
-              <Typography variant="h6" color="inherit" noWrap>
+              <Typography className={classes.title} variant="h6" color="inherit" noWrap>
                 {title}
               </Typography>
             </Toolbar>
