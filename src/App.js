@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { CssBaseline } from '@material-ui/core';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 import SignIn from './screens/SignIn/'
 
@@ -17,14 +18,14 @@ const theme = createMuiTheme({
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <Router>
         <Fragment>
           <CssBaseline />
           <MuiThemeProvider theme={theme}>
-            <SignIn />
+            <Route exact path='/' component={SignIn} />
           </MuiThemeProvider>
         </Fragment>
-      </div>
+      </Router>
     );
   }
 }
