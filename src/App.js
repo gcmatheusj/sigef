@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 import SignIn from './screens/SignIn/'
 import Home from './screens/Header/'
+//import Empresas from './screens/X'
 
 const theme = createMuiTheme({
   palette: {
@@ -24,7 +25,8 @@ class App extends Component {
           <CssBaseline />
           <MuiThemeProvider theme={theme}>
             <Route exact path='/' component={SignIn} />
-            <Router path='/home' component={Home} />
+            <Route path='/home' component={Home} />
+           {/* <Route path='/empresas' component={} />*/}
           </MuiThemeProvider>
         </Fragment>
       </Router>

@@ -73,22 +73,13 @@ class Header extends Component {
           <div className={classes.toolbar} />
         </Hidden>
         <MenuList>
-          <MenuItem component={Link} to='' /*selected={'/escolha-do-modelo' === pathname} */>
-            <ListItemIcon>
-              <AddIcon />
-            </ListItemIcon>
-            Create Tutor
+          <MenuItem component={Link} to='/empresas' /*selected={'/escolha-do-modelo' === pathname} */>
+            Empresas
           </MenuItem>
           <MenuItem component={Link} to='/'>
-            <ListItemIcon>
-              <HomeIcon />
-            </ListItemIcon>
             Home
           </MenuItem>
-          <MenuItem component={Link} to='/visualizar-tutores'>
-            <ListItemIcon>
-              <DashboardIcon />
-            </ListItemIcon>
+          <MenuItem component={Link} to='/'>
             Dashboard
           </MenuItem>
         </MenuList>
