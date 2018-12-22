@@ -23,7 +23,7 @@ class App extends Component {
           <CssBaseline />
           <MuiThemeProvider theme={theme}>
             <Route exact path='/' component={SignIn} />
-            <Router path='/home' component={} />
+            
           </MuiThemeProvider>
         </Fragment>
       </Router>
