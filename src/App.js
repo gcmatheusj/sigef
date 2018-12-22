@@ -2,14 +2,14 @@ import React, { Component, Fragment } from 'react';
 import { CssBaseline } from '@material-ui/core';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
-import SignIn from './screens/SignIn'
+import SignIn from './screens/SignIn/'
 
 const theme = createMuiTheme({
   palette: {
     primary: {
-      light: '#e4ff54',
-      main: '#aeea00',
-      dark: '#79b700',
+      light: '#bef67a',
+      main: '#8bc34a',
+      dark: '#5a9216',
     },
   },
 });
