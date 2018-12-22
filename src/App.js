@@ -1,25 +1,29 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component, Fragment } from 'react';
+import { CssBaseline } from '@material-ui/core';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+
+import SignIn from './screens/SignIn'
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      light: '#e4ff54',
+      main: '#aeea00',
+      dark: '#79b700',
+    },
+  },
+});
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Fragment>
+          <CssBaseline />
+          <MuiThemeProvider theme={theme}>
+            <SignIn />
+          </MuiThemeProvider>
+        </Fragment>
       </div>
     );
   }
