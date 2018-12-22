@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { Link, withRouter } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 import { compose } from 'recompose'
 import PropTypes from 'prop-types';
 import {
@@ -11,50 +11,12 @@ import {
   Drawer,
   MenuList,
   MenuItem,
-  ListItemIcon,
-  ListItemText,
   CssBaseline,
 } from '@material-ui/core';
-import HomeIcon from '@material-ui/icons/Home'
-import DashboardIcon from '@material-ui/icons/Dashboard'
-import AddIcon from '@material-ui/icons/Add'
 import { withStyles } from '@material-ui/core/styles';
 import { Menu } from '@material-ui/icons';
 
-const drawerWidth = 240;
-
-const styles = theme => ({
-  root: {
-    display: 'flex',
-  },
-  drawer: {
-    [theme.breakpoints.up('sm')]: {
-      width: drawerWidth,
-      flexShrink: 0,
-    },
-  },
-  appBar: {
-    zIndex: theme.zIndex.drawer + 1,
-  },
-  title: {
-    color: '#fff'
-  },
-  menuButton: {
-    marginRight: 20,
-    [theme.breakpoints.up('sm')]: {
-      display: 'none',
-    },
-  },
-  toolbar: theme.mixins.toolbar,
-  drawerPaper: {
-    width: drawerWidth,
-  },
-  content: {
-    flexGrow: 1,
-    paddingTop: 0,
-    padding: theme.spacing.unit * 3,
-  },
-});
+import styles from './styles'
 
 class Header extends Component {
   state = {

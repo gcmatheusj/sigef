@@ -3,29 +3,15 @@ import Header from '../Header'
 import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
 import { Typography, Paper, Button } from '@material-ui/core';
 import Add from '@material-ui/icons/Add'
 import Search from '@material-ui/icons/Search'
+import Save from '@material-ui/icons/Save'
+import Delete from '@material-ui/icons/Delete'
+import Cancel from '@material-ui/icons/Cancel'
 import { withStyles } from '@material-ui/core/styles'
 
-const styles = theme => ({
-    root: {
-        padding: 20,
-        marginTop: 24
-    },
-    title: {
-        fontSize: 20,
-        fontWeight: 'bold',
-        marginBottom: 20
-    },
-    btn: {
-        marginTop: 20,
-        marginRight: 10,
-        color: '#fff'
-    }
-})
+import styles from './styles'
 
 const Home = props => {
     const { classes } = props
@@ -115,6 +101,18 @@ const Home = props => {
                     <Button className={classes.btn} variant='contained' color='primary'>
                         <Search />
                         Localizar
+                    </Button>
+                    <Button className={classes.btn} variant='contained' color='primary'>
+                        <Save />
+                        Salvar
+                    </Button>
+                    <Button className={classes.btn} variant='contained' color='primary'>
+                        <Delete />
+                        Remover
+                    </Button>
+                    <Button className={classes.btn} variant='contained' color='primary'>
+                        <Cancel />
+                        Cancelar
                     </Button>
                 </Grid>
             </Paper>

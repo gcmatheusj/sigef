@@ -30,8 +30,11 @@ const styles = theme => ({
       color: '#FFF'
     },
     logo: {
-      
-    }
+      width: '100px'
+    },
+    text: {
+      paddingTop: '20px'
+    },
   });
 
 export default styles
