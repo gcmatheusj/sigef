@@ -10,9 +10,9 @@ import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
 import withStyles from '@material-ui/core/styles/withStyles';
 
-import logo from '../../assets/logo.jpg'
+import logo from '../../assets/logo.jpg';
 
-import styles from './styles'
+import styles from './styles';
 
 function SignIn(props) {
   const { classes } = props;

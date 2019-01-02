@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
-import { withRouter } from 'react-router-dom'
-import { compose } from 'recompose'
+import { withRouter } from 'react-router-dom';
+import { compose } from 'recompose';
 import PropTypes from 'prop-types';
 import {
   AppBar,
@@ -16,7 +16,7 @@ import {
 import { withStyles } from '@material-ui/core/styles';
 import { Menu } from '@material-ui/icons';
 
-import styles from './styles'
+import styles from './styles';
 
 class Header extends Component {
   state = {
@@ -40,7 +40,7 @@ class Header extends Component {
         </Hidden>
         <MenuList>
           <MenuItem>
-           Empresa
+            Empresa
           </MenuItem>
           <MenuItem>
             Nível de Acesso
