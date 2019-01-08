@@ -13,6 +13,8 @@ import {
   MenuItem,
   CssBaseline,
 } from '@material-ui/core';
+import { Home, Settings } from '@material-ui/icons'
+import { VerifiedUser } from '@material-ui/icons'
 import { withStyles } from '@material-ui/core/styles';
 import { Menu } from '@material-ui/icons';
 
@@ -36,17 +38,20 @@ class Header extends Component {
     const drawer = (
       <div>
         <Hidden smDown>
-          <div className={classes.toolbar} />
+          <div className={classes.toolbar} style={{ backgroundColor: '#9e9e9e'}}/>
         </Hidden>
         <MenuList>
-          <MenuItem>
-            Empresa
+          <MenuItem className={classes.menuItem}>
+            <Home className={classes.drawerIcon} />
+            Home
           </MenuItem>
-          <MenuItem>
+          <MenuItem className={classes.menuItem}>
+            <VerifiedUser className={classes.drawerIcon} />
             Nível de Acesso
           </MenuItem>
-          <MenuItem>
-            Usuários
+          <MenuItem className={classes.menuItem}>
+            <Settings className={classes.drawerIcon} />
+            Configurações
           </MenuItem>
         </MenuList>
       </div>
