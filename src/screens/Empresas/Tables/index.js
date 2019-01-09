@@ -8,7 +8,7 @@ import TableFooter from '@material-ui/core/TableFooter';
 import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
 import Button from '@material-ui/core/Button'
-import { Edit, Delete } from '@material-ui/icons'
+import { Edit, Delete, PersonAdd, Search } from '@material-ui/icons/'
 import TableHead from '@material-ui/core/TableHead';
 import Paper from '@material-ui/core/Paper';
 import IconButton from '@material-ui/core/IconButton';
@@ -16,12 +16,14 @@ import FirstPageIcon from '@material-ui/icons/FirstPage';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import LastPageIcon from '@material-ui/icons/LastPage';
+import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
 
 const CustomTableCell = withStyles(theme => ({
     head: {
-      color: '#000',
+        color: '#000',
     }
-  }))(TableCell);
+}))(TableCell);
 
 const actionsStyles = theme => ({
     root: {
@@ -103,9 +105,9 @@ const TablePaginationActionsWrapped = withStyles(actionsStyles, { withTheme: tru
 );
 
 let counter = 0;
-function createData(name, calories, fat) {
+function createData(name, email, dataC, dataU) {
     counter += 1;
-    return { id: counter, name, calories, fat };
+    return { id: counter, name, email, dataC, dataU };
 }
 
 const styles = theme => ({
@@ -124,25 +126,32 @@ const styles = theme => ({
     },
     margin: {
         margin: theme.spacing.unit,
-      },
+    },
+    title: {
+        backgroundColor: "#bdbdbd",
+        height: 50,
+    },
+    colorTitle: {
+        padding: 10,
+        color: "#f5f5f5",
+    }
 });
 
 class CustomPaginationActionsTable extends React.Component {
     state = {
         rows: [
-            createData('Cupcake', 305, 3.7),
-            createData('Donut', 452, 25.0),
-            createData('Eclair', 262, 16.0),
-            createData('Frozen yoghurt', 159, 6.0),
-            createData('Gingerbread', 356, 16.0),
-            createData('Honeycomb', 408, 3.2),
-            createData('Ice cream sandwich', 237, 9.0),
-            createData('Jelly Bean', 375, 0.0),
-            createData('KitKat', 518, 26.0),
-            createData('Lollipop', 392, 0.2),
-            createData('Marshmallow', 318, 0),
-            createData('Nougat', 360, 19.0),
-            createData('Oreo', 437, 18.0),
+            createData('Lorem Ipsum', 'xxx@email.com', '01/01/2019', '02/01/2019'),
+            createData('Lorem Ipsum', 'xxx@email.com', '01/01/2019', '02/01/2019'),
+            createData('Lorem Ipsum', 'xxx@email.com', '01/01/2019', '02/01/2019'),
+            createData('Lorem Ipsum', 'xxx@email.com', '01/01/2019', '02/01/2019'),
+            createData('Lorem Ipsum', 'xxx@email.com', '01/01/2019', '02/01/2019'),
+            createData('Lorem Ipsum', 'xxx@email.com', '01/01/2019', '02/01/2019'),
+            createData('Lorem Ipsum', 'xxx@email.com', '01/01/2019', '02/01/2019'),
+            createData('Lorem Ipsum', 'xxx@email.com', '01/01/2019', '02/01/2019'),
+            createData('Lorem Ipsum', 'xxx@email.com', '01/01/2019', '02/01/2019'),
+            createData('Lorem Ipsum', 'xxx@email.com', '01/01/2019', '02/01/2019'),
+            createData('Lorem Ipsum', 'xxx@email.com', '01/01/2019', '02/01/2019'),
+            createData('Lorem Ipsum', 'xxx@email.com', '01/01/2019', '02/01/2019'),
         ].sort((a, b) => (a.calories < b.calories ? -1 : 1)),
         page: 0,
         rowsPerPage: 5,
@@ -163,14 +172,35 @@ class CustomPaginationActionsTable extends React.Component {
 
         return (
             <Paper className={classes.root}>
+                <div className={classes.title}>
+                    <Grid container direction="row">
+                        <Grid>
+                            <Typography className={classes.colorTitle} 
+                            variant="subheading" gutterBottom>
+                                Total Users
+                            </Typography>
+                        </Grid>
+                        <Grid container justify="flex-end">
+                            <Button>
+                                <PersonAdd className={classes.icon} />
+                            </Button>
+                            <Button>
+                                <Search className={classes.icon} />
+                            </Button>
+                        </Grid>
+                    </Grid>
+                </div>
+
                 <div className={classes.tableWrapper}>
                     <Table className={classes.table}>
                         <TableHead>
                             <TableRow>
                                 <CustomTableCell>ID</CustomTableCell>
-                                <CustomTableCell >Calories</CustomTableCell>
-                                <CustomTableCell >Fat (g)</CustomTableCell>
-                                <CustomTableCell >Ações</CustomTableCell>
+                                <CustomTableCell>Name</CustomTableCell>
+                                <CustomTableCell>Email</CustomTableCell>
+                                <CustomTableCell>Created</CustomTableCell>
+                                <CustomTableCell>Updated</CustomTableCell>
+                                <CustomTableCell>Actions</CustomTableCell>
                             </TableRow>
                         </TableHead>
                         <TableBody>
@@ -178,10 +208,12 @@ class CustomPaginationActionsTable extends React.Component {
                                 return (
                                     <TableRow key={row.id}>
                                         <TableCell component="th" scope="row">
-                                            {row.name}
+                                            {row.id}
                                         </TableCell>
-                                        <TableCell>{row.calories}</TableCell>
-                                        <TableCell >{row.fat}</TableCell>
+                                        <TableCell>{row.name}</TableCell>
+                                        <TableCell >{row.email}</TableCell>
+                                        <TableCell >{row.dataC}</TableCell>
+                                        <TableCell >{row.dataU}</TableCell>
                                         <TableCell>
                                             <Button>
                                                 <Edit className={classes.icon} />
