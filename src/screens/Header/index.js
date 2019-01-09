@@ -11,9 +11,11 @@ import {
   Drawer,
   MenuList,
   MenuItem,
+  Grid,
+  Avatar,
   CssBaseline,
 } from '@material-ui/core';
-import { Home, Settings } from '@material-ui/icons'
+import { Home, Settings, Face } from '@material-ui/icons'
 import { VerifiedUser } from '@material-ui/icons'
 import { withStyles } from '@material-ui/core/styles';
 import { Menu } from '@material-ui/icons';
@@ -40,6 +42,11 @@ class Header extends Component {
         <Hidden smDown>
           <div className={classes.toolbar} style={{ backgroundColor: '#9e9e9e'}}/>
         </Hidden>
+        <Grid container justify='center' alignItems='center' style={{ height: 150, backgroundColor: '#37474f' }}>
+          <Avatar style={{ height: 100, width: 100, backgroundColor: '#37474f' }}>
+            <Face style={{ width: 100, height: 100, color: '#fff' }}/>
+          </Avatar>
+        </Grid>
         <MenuList>
           <MenuItem className={classes.menuItem}>
             <Home className={classes.drawerIcon} />

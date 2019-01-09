@@ -3,13 +3,15 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 
 import Header from '../Header';
+import CustomPaginationActionsTable from './Tables'
+
 import styles from './styles';
 
 const Empresas = props => {
     const { classes } = props
     return (
-        <Header title="Mostrando Todas Empresas">
-            
+        <Header title="Exibindo Empresas">
+            <CustomPaginationActionsTable />
         </Header>
     )
 }
