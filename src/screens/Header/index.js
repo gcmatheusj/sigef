@@ -40,10 +40,10 @@ class Header extends Component {
     const drawer = (
       <div>
         <Hidden smDown>
-          <div className={classes.toolbar} style={{ backgroundColor: '#9e9e9e'}}/>
+          <div className={classes.toolbar} style={{ backgroundColor: '#e0e0e0'}}/>
         </Hidden>
-        <Grid container justify='center' alignItems='center' style={{ height: 150, backgroundColor: '#37474f' }}>
-          <Avatar style={{ height: 100, width: 100, backgroundColor: '#37474f' }}>
+        <Grid container justify='center' alignItems='center' style={{ height: 150, backgroundColor: '#5a9216' }}>
+          <Avatar style={{ height: 100, width: 100, backgroundColor: '#5a9216' }}>
             <Face style={{ width: 100, height: 100, color: '#fff' }}/>
           </Avatar>
         </Grid>
@@ -114,7 +114,7 @@ class Header extends Component {
             </Hidden>
           </nav>
           <main className={classes.content}>
-            <div className={classes.toolbar} />
+            <div className={classes.toolbar} style={{ marginBottom: 24 }} />
             {children}
           </main>
         </div>

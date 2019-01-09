@@ -1,7 +1,6 @@
 const styles = theme => ({
     root: {
-        padding: 20,
-        marginTop: 24,
+        marginTop: theme.spacing.unit * 2,
     },
     title: {
         fontSize: 20,

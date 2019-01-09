@@ -27,14 +27,14 @@ const styles = theme => ({
     },
   },
   menuItem: {
-    color: '#cfd8dc'
+    color: '#fff'
   },
   drawerIcon: {
     marginRight: 20,
   },
   toolbar: theme.mixins.toolbar,
   drawerPaper: {
-    backgroundColor: '#455a64',
+    backgroundColor: '#8bc34a',
     width: drawerWidth,
     borderRight: 0
   },
