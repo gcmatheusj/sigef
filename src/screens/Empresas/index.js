@@ -40,6 +40,10 @@ class Empresas extends Component {
     })
   }
 
+  add = (empresa) => {
+    empresas.push(empresa)
+  }
+
   render() {
     const { classes } = this.props
     return (
@@ -51,7 +55,7 @@ class Empresas extends Component {
           onClick={this.handleOpen}
         ><Add />Adicionar empresa</Button>
         <CustomPaginationActionsTable empresas={empresas}/>
-        <Modal open={this.state.openModal} handleClose={this.handleClose} />
+        <Modal open={this.state.openModal} handleClose={this.handleClose} add={this.add} />
       </Header>
     )
   }

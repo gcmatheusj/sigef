@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Dialog, Grid, DialogContent, DialogTitle, DialogActions, Button } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import TextField from '@material-ui/core/TextField';
@@ -20,186 +20,166 @@ const styles = theme => ({
   },
 });
 
-const cadEmpresas = props => {
-  const { classes } = props
+class cadEmpresas extends Component {
 
-  return (
-    <Dialog
-      open={props.open}
-      onClose={props.handleClose}
-      aria-labelledby="form-dialog-title"
-    >
+  state ={
+      nome: '',
+      nomeFantasia: '',
+      cnpj: '',
+      inscEstadual: '',
+  }
 
-    <DialogTitle>Cadatrar nova empresa</DialogTitle>
+  handleContent = (event) => {
+    this.setState({
+      [event.target.name]: event.target.value
+    })
+  }
+  
+  add = () => {
+    const empresa = [this.state.nome,this.state.nomeFantasia, this.state.cnpj, this.state.inscEstadual]
+    this.props.add(empresa)
+    this.props.handleClose()
+  }
 
-      <DialogContent>
-        <Grid style={{ marginBottom: 10, marginTop: 10 }} container spacing={24}>
-          <Grid item xs={12} sm={6}>
-            <TextField
+  render() {
+    const { classes } = this.props
+    return (
+      <Dialog
+        open={this.props.open}
+        onClose={this.props.handleClose}
+        aria-labelledby="form-dialog-title"
+      >
 
-              id="codigo"
-              name="codigo"
-              label="Código"
-              fullWidth
-              autoComplete="fname"
-              variant="outlined"
-            />
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <TextField
+        <DialogTitle>Cadatrar nova empresa</DialogTitle>
 
-              id="data"
-              name="data"
-              label="Data"
-              fullWidth
-              autoComplete="lname"
-              variant="outlined"
-            />
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <TextField
+        <DialogContent>
+          <Grid style={{ marginBottom: 10, marginTop: 10 }} container spacing={24}>
+            <Grid item xs={12} sm={6}>
+              <TextField
 
-              id="razaoSocial"
-              name="razaoSocial"
-              label="Razão Social"
-              fullWidth
-              autoComplete="billing address-line1"
-              variant="outlined"
-            />
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <TextField
-              id="nomeFantasia"
-              name="nomeFantasia"
-              label="Nome Fantasia"
-              fullWidth
-              autoComplete="billing address-line2"
-              variant="outlined"
-            />
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <TextField
+                id="codigo"
+                name="codigo"
+                label="Código"
+                fullWidth
+                autoComplete="fname"
+                variant="outlined"
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <TextField
 
-              id="contato"
-              name="contato"
-              label="Contato"
-              fullWidth
-              autoComplete="billing address-level2"
-              variant="outlined"
-            />
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <TextField id="email" name="email" label="E-mail" fullWidth variant="outlined" />
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <TextField
+                id="data"
+                name="data"
+                label="Data"
+                fullWidth
+                autoComplete="lname"
+                variant="outlined"
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <TextField
 
-              id="cpnj"
-              name="cnpj"
-              label="CNPJ"
-              fullWidth
-              autoComplete="billing postal-code"
-              variant="outlined"
-            />
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <TextField
+                id="nome"
+                name="nome"
+                value={this.state.nome}
+                onChange={this.handleContent}
+                label="Nome"
+                fullWidth
+                autoComplete="billing address-line1"
+                variant="outlined"
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                id="nomeFantasia"
+                name="nomeFantasia"
+                label="Nome Fantasia"
+                value={this.state.nomeFantasia}
+                onChange={this.handleContent}
+                fullWidth
+                autoComplete="billing address-line2"
+                variant="outlined"
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <TextField
 
-              id="inscEstadual"
-              name="inscEstadual"
-              label="Insc. Estadual"
-              fullWidth
-              autoComplete="billing country"
-              variant="outlined"
-            />
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <TextField
+                id="contato"
+                name="contato"
+                label="Contato"
+                fullWidth
+                autoComplete="billing address-level2"
+                variant="outlined"
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <TextField id="email" name="email" label="E-mail" fullWidth variant="outlined" />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <TextField
 
-              id="codigo"
-              name="codigo"
-              label="Código"
-              fullWidth
-              autoComplete="fname"
-              variant="outlined"
-            />
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <TextField
+                id="cpnj"
+                name="cnpj"
+                label="CNPJ"
+                value={this.state.cnpj}
+                onChange={this.handleContent}
+                fullWidth
+                autoComplete="billing postal-code"
+                variant="outlined"
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <TextField
 
-              id="data"
-              name="data"
-              label="Data"
-              fullWidth
-              autoComplete="lname"
-              variant="outlined"
-            />
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <TextField
+                id="inscEstadual"
+                name="inscEstadual"
+                value={this.state.inscEstadual}
+                onChange={this.handleContent}
+                label="Insc. Estadual"
+                fullWidth
+                autoComplete="billing country"
+                variant="outlined"
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <TextField id="email" name="email" label="E-mail" fullWidth variant="outlined" />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <TextField
 
-              id="razaoSocial"
-              name="razaoSocial"
-              label="Razão Social"
-              fullWidth
-              autoComplete="billing address-line1"
-              variant="outlined"
-            />
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <TextField
-              id="nomeFantasia"
-              name="nomeFantasia"
-              label="Nome Fantasia"
-              fullWidth
-              autoComplete="billing address-line2"
-              variant="outlined"
-            />
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <TextField
+                id="cpnj"
+                name="cnpj"
+                label="CNPJ"
+                fullWidth
+                autoComplete="billing postal-code"
+                variant="outlined"
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <TextField
 
-              id="contato"
-              name="contato"
-              label="Contato"
-              fullWidth
-              autoComplete="billing address-level2"
-              variant="outlined"
-            />
+                id="inscEstadual"
+                name="inscEstadual"
+                label="Insc. Estadual"
+                fullWidth
+                autoComplete="billing country"
+                variant="outlined"
+              />
+            </Grid>
           </Grid>
-          <Grid item xs={12} sm={6}>
-            <TextField id="email" name="email" label="E-mail" fullWidth variant="outlined" />
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <TextField
-
-              id="cpnj"
-              name="cnpj"
-              label="CNPJ"
-              fullWidth
-              autoComplete="billing postal-code"
-              variant="outlined"
-            />
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <TextField
-
-              id="inscEstadual"
-              name="inscEstadual"
-              label="Insc. Estadual"
-              fullWidth
-              autoComplete="billing country"
-              variant="outlined"
-            />
-          </Grid>
-        </Grid>
-      </DialogContent>
-      <DialogActions>
-        <Button color='primary' onClick={props.handleClose}>Cancelar</Button>
-        <Button variant='contained' color='primary' style={{color:'#fff'}}>Adicionar</Button>
-      </DialogActions>
-    </Dialog>
-  )
+        </DialogContent>
+        <DialogActions>
+          <Button color='primary' onClick={this.props.handleClose}>Cancelar</Button>
+          <Button
+            variant='contained'
+            color='primary'
+            style={{ color: '#fff' }}
+            onClick={this.add}
+          >Adicionar</Button>
+        </DialogActions>
+      </Dialog>
+    )
+  }
 }
 
 cadEmpresas.propTypes = {
