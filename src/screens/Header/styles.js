@@ -43,6 +43,20 @@ const styles = theme => ({
     paddingTop: 0,
     padding: theme.spacing.unit * 3,
   },
+  wrapperAvatar: { 
+    height: 150, 
+    backgroundColor: '#5a9216' 
+  },
+  avatar: { 
+    height: 100, 
+    width: 100, 
+    backgroundColor: '#5a9216' 
+  },
+  face: { 
+    width: 100, 
+    height: 100, 
+    color: '#fff' 
+  },
 });
 
 export default styles

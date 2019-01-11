@@ -1,5 +1,12 @@
 import React, { Component } from 'react';
-import { Dialog, Grid, DialogContent, DialogTitle, DialogActions, Button } from '@material-ui/core';
+import { 
+  Dialog, 
+  Grid, 
+  DialogContent, 
+  DialogTitle, 
+  DialogActions, 
+  Button 
+} from '@material-ui/core';
 import PropTypes from 'prop-types';
 import TextField from '@material-ui/core/TextField';
 import { withStyles } from '@material-ui/core/styles';
@@ -56,7 +63,7 @@ class cadEmpresas extends Component {
         aria-labelledby="form-dialog-title"
       >
 
-        <DialogTitle>Cadatrar nova empresa</DialogTitle>
+        <DialogTitle>Cadastrar nova empresa</DialogTitle>
 
         <DialogContent>
           <Grid style={{ marginBottom: 10, marginTop: 10 }} container spacing={24}>
@@ -119,7 +126,13 @@ class cadEmpresas extends Component {
               />
             </Grid>
             <Grid item xs={12} sm={6}>
-              <TextField id="email" name="email" label="E-mail" fullWidth variant="outlined" />
+              <TextField 
+                id="email" 
+                name="email" 
+                label="E-mail" 
+                fullWidth 
+                variant="outlined" 
+              />
             </Grid>
             <Grid item xs={12} sm={6}>
               <TextField
@@ -141,31 +154,6 @@ class cadEmpresas extends Component {
                 name="inscEstadual"
                 value={this.state.inscEstadual}
                 onChange={this.handleContent}
-                label="Insc. Estadual"
-                fullWidth
-                autoComplete="billing country"
-                variant="outlined"
-              />
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <TextField id="email" name="email" label="E-mail" fullWidth variant="outlined" />
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <TextField
-
-                id="cpnj"
-                name="cnpj"
-                label="CNPJ"
-                fullWidth
-                autoComplete="billing postal-code"
-                variant="outlined"
-              />
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <TextField
-
-                id="inscEstadual"
-                name="inscEstadual"
                 label="Insc. Estadual"
                 fullWidth
                 autoComplete="billing country"

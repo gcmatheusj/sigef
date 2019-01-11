@@ -42,9 +42,9 @@ class Header extends Component {
         <Hidden smDown>
           <div className={classes.toolbar} style={{ backgroundColor: '#e0e0e0'}}/>
         </Hidden>
-        <Grid container justify='center' alignItems='center' style={{ height: 150, backgroundColor: '#5a9216' }}>
-          <Avatar style={{ height: 100, width: 100, backgroundColor: '#5a9216' }}>
-            <Face style={{ width: 100, height: 100, color: '#fff' }}/>
+        <Grid container justify='center' alignItems='center' className={classes.wrapperAvatar}>
+          <Avatar className={classes.avatar}>
+            <Face className={classes.face}/>
           </Avatar>
         </Grid>
         <MenuList>
