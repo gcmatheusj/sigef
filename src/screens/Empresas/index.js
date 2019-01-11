@@ -5,12 +5,9 @@ import { Add } from '@material-ui/icons';
 import { withStyles } from '@material-ui/core/styles';
 
 import Header from '../Header';
-<<<<<<< HEAD
 import CustomPaginationActionsTable from './Tables'
 import Modal from './Tables/ModalCadEmpresa'
-=======
 import CustomPaginationActionsTable from './Tables';
->>>>>>> 284329b34baca2561ebf8dbdb1084b033522b6df
 
 import styles from './styles';
 
