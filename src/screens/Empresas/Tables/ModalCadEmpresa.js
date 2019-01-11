@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dialog, Grid, DialogContent } from '@material-ui/core';
+import { Dialog, Grid, DialogContent, DialogTitle, DialogActions, Button } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import TextField from '@material-ui/core/TextField';
 import { withStyles } from '@material-ui/core/styles';
@@ -24,13 +24,16 @@ const cadEmpresas = props => {
   const { classes } = props
 
   return (
-    <Grid container justify="center">
-      <Dialog
-        open={props.open}
-        onClose={props.handleClose}
-        aria-labelledby="form-dialog-title"
-      >
-        <Grid style={{ marginBottom: 20 }} container spacing={24}>
+    <Dialog
+      open={props.open}
+      onClose={props.handleClose}
+      aria-labelledby="form-dialog-title"
+    >
+
+    <DialogTitle>Cadatrar nova empresa</DialogTitle>
+
+      <DialogContent>
+        <Grid style={{ marginBottom: 10, marginTop: 10 }} container spacing={24}>
           <Grid item xs={12} sm={6}>
             <TextField
 
@@ -190,8 +193,12 @@ const cadEmpresas = props => {
             />
           </Grid>
         </Grid>
-      </Dialog>
-    </Grid>
+      </DialogContent>
+      <DialogActions>
+        <Button color='primary' onClick={props.handleClose}>Cancelar</Button>
+        <Button variant='contained' color='primary' style={{color:'#fff'}}>Adicionar</Button>
+      </DialogActions>
+    </Dialog>
   )
 }
 
