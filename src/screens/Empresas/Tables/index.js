@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import MUIDataTable from 'mui-datatables'
-import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles'
+import React, { Component } from 'react';
+import MUIDataTable from 'mui-datatables';
+import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 
 
 export default class NovaTabela extends Component {
