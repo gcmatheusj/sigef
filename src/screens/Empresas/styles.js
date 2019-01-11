@@ -23,6 +23,12 @@ const styles = theme => ({
         backgroundColor: '#F44336',
         marginTop: 20,
         color: '#fff'
+    },
+    button: {
+      marginBottom: theme.spacing.unit * 2,
+      color: '#ffffff',
+      paddingLeft: theme.spacing.unit,
+      paddingRight: theme.spacing.unit*2,
     }
 });
 

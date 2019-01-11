@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { TextField, Button, Grid, InputAdornment } from '@material-ui/core'
-import { Search } from '@material-ui/icons'
+import { Button } from '@material-ui/core'
+import { Add } from '@material-ui/icons'
 import { withStyles } from '@material-ui/core/styles';
 
 import Header from '../Header';
@@ -10,16 +10,17 @@ import CustomPaginationActionsTable from './Tables'
 import styles from './styles';
 
 const Empresas = props => {
-    const { classes } = props
-    return (
-        <Header title="Exibindo Empresas">
-            <CustomPaginationActionsTable />
-        </Header>
-    )
+  const { classes } = props
+  return (
+    <Header title="Exibindo Empresas">
+      <Button variant='contained' color='primary' className={classes.button}><Add />Adicionar empresa</Button>
+      <CustomPaginationActionsTable />
+    </Header>
+  )
 }
 
 Empresas.propTypes = {
-    classes: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired,
 }
 
 export default withStyles(styles)(Empresas)
