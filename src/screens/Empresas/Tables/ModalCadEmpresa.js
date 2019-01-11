@@ -38,6 +38,12 @@ class cadEmpresas extends Component {
   add = () => {
     const empresa = [this.state.nome,this.state.nomeFantasia, this.state.cnpj, this.state.inscEstadual]
     this.props.add(empresa)
+    this.setState({
+      nome: '',
+      nomeFantasia: '',
+      cnpj: '',
+      inscEstadual: '',
+    })
     this.props.handleClose()
   }
 
