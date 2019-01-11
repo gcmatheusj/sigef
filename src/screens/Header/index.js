@@ -15,8 +15,8 @@ import {
   Avatar,
   CssBaseline,
 } from '@material-ui/core';
-import { Home, Settings, Face } from '@material-ui/icons'
-import { VerifiedUser } from '@material-ui/icons'
+import { Home, Settings, Face } from '@material-ui/icons';
+import { VerifiedUser } from '@material-ui/icons';
 import { withStyles } from '@material-ui/core/styles';
 import { Menu } from '@material-ui/icons';
 

@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Button } from '@material-ui/core'
-import { Add } from '@material-ui/icons'
+import { Button } from '@material-ui/core';
+import { Add } from '@material-ui/icons';
 import { withStyles } from '@material-ui/core/styles';
 
 import Header from '../Header';
-import CustomPaginationActionsTable from './Tables'
+import CustomPaginationActionsTable from './Tables';
 
 import styles from './styles';
 

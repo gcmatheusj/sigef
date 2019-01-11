@@ -1,12 +1,11 @@
 import React, { Component, Fragment } from 'react';
 import { CssBaseline } from '@material-ui/core';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-import SignIn from './screens/SignIn/'
-import Home from './screens/Home/'
+import SignIn from './screens/SignIn/';
+import Home from './screens/Home/';
 import Empresas from './screens/Empresas';
-import Cadastro from './screens/Empresas/Tables/modalCadEmpresa';
 
 const theme = createMuiTheme({
   palette: {
@@ -28,7 +27,6 @@ class App extends Component {
             <Route exact path='/' component={SignIn} />
             <Route path='/home' component={Home} />
             <Route path='/empresas' component={Empresas} />
-            <Route path='/cad' component={Cadastro} />
           </MuiThemeProvider>
         </Fragment>
       </Router>
