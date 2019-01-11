@@ -7,7 +7,6 @@ import { withStyles } from '@material-ui/core/styles';
 import Header from '../Header';
 import CustomPaginationActionsTable from './Tables'
 import Modal from './Tables/ModalCadEmpresa'
-import CustomPaginationActionsTable from './Tables';
 
 import styles from './styles';
 
