@@ -9,7 +9,6 @@ import Add from '@material-ui/icons/Add';
 import Search from '@material-ui/icons/Search';
 import Save from '@material-ui/icons/Save';
 import Delete from '@material-ui/icons/Delete';
-import Cancel from '@material-ui/icons/Cancel';
 
 import Header from '../Header';
 import styles from './styles';
