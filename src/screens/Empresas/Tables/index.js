@@ -18,16 +18,16 @@ export default class NovaTabela extends Component {
         const columns = ["Nome", "Nome Fantasia", "CNPJ", "Insc. Estadual", "Actions"];
 
         const data = [
-            ["FUNERÁRIA 1", "FUNERÁRIA 1", "0000000000000000", 'ISENTO', ""],
-            ["FUNERÁRIA 2", "FUNERÁRIA 2", "0000000000000000", 'ISENTO', ""],
-            ["FUNERÁRIA 3", "FUNERÁRIA 3", "0000000000000000", 'ISENTO', ""],
-            ["FUNERÁRIA 4", "FUNERÁRIA 4", "0000000000000000", 'ISENTO', ""],
-            ["FUNERÁRIA 5", "FUNERÁRIA 5", "0000000000000000", 'ISENTO', ""],
-            ["FUNERÁRIA 6", "FUNERÁRIA 6", "0000000000000000", 'ISENTO', ""],
-            ["FUNERÁRIA 7", "FUNERÁRIA 7", "0000000000000000", 'ISENTO', ""],
-            ["FUNERÁRIA 8", "FUNERÁRIA 8", "0000000000000000", 'ISENTO', ""],
-            ["FUNERÁRIA 9", "FUNERÁRIA 9", "0000000000000000", 'ISENTO', ""],
-            ["FUNERÁRIA 10", "FUNERÁRIA 10", "0000000000000000", 'ISENTO', ""],
+            ["EMPRESA 1", "EMPRESA 1", "0000000000000000", 'ISENTO', ""],
+            ["EMPRESA 2", "EMPRESA 2", "0000000000000000", 'ISENTO', ""],
+            ["EMPRESA 3", "EMPRESA 3", "0000000000000000", 'ISENTO', ""],
+            ["EMPRESA 4", "EMPRESA 4", "0000000000000000", 'ISENTO', ""],
+            ["EMPRESA 5", "EMPRESA 5", "0000000000000000", 'ISENTO', ""],
+            ["EMPRESA 6", "EMPRESA 6", "0000000000000000", 'ISENTO', ""],
+            ["EMPRESA 7", "EMPRESA 7", "0000000000000000", 'ISENTO', ""],
+            ["EMPRESA 8", "EMPRESA 8", "0000000000000000", 'ISENTO', ""],
+            ["EMPRESA 9", "EMPRESA 9", "0000000000000000", 'ISENTO', ""],
+            ["EMPRESA 10", "EMPRESA 10", "0000000000000000", 'ISENTO', ""],
             
         ];
 
